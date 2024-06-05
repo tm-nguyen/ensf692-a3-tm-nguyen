@@ -111,20 +111,21 @@ class SchoolData:
 
         # Print Stage 1 requirements here
 
-        # Print the shape of the data array.
+        # Print the shape of the data array. Uses the shape the print out the shape of an array
         print(f"Shape of full data array: {self.data.shape}")
-        # Print the dimention of the data array.
+        # Print the dimention of the data array. Uses the ndim to print out the dimentsions of an array.
         print(f"Dimensions of full data array: {self.data.ndim}")
 
+        # Use the while loop to make sure the invalid input will not terminate program, and only break when the program running successfuly.
         while True:
             # Prompt for user input for the school name or school code.
             user_input = input("Please enter the high school name or school code: ")
             
             # Print Stage 2 requirements here
 
+            print("\n***Requested School Statistics***\n")
             # Use try-except to make sure the user input the valid school code and school name.
             try:
-                print("\n***Requested School Statistics***\n")
                 # Use isdigit() to check the input value is a string for a digit number.
                 if user_input.isdigit():
                     # If the input is a number, convert it to int and find index in school_codes that match with the input value.
