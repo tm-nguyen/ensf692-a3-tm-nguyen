@@ -9,7 +9,7 @@
 import numpy as np
 from given_data import year_2013, year_2014, year_2015, year_2016, year_2017, year_2018, year_2019, year_2020, year_2021, year_2022
 
-# Declare any global variables needed to store the data here
+# Declare any global variables needed to store the data here.
 
 
 # You may add your own additional classes, functions, variables, etc.
@@ -81,7 +81,7 @@ class SchoolData:
         # Print the lowest enrollment for a single grade
         print(f"Lowest enrollment for a single grade: {int(np.floor(np.nanmin(school_data)))}")
 
-        # Use for loop to print total enrollment for each year
+        # Use for loop to print total enrollment for each year.
         for year in range(self.data.shape[0]):
             # Take all data that corresponding with year, then calculating the sum, ground floor, and ground int.
             # For each time count, plus the total count (year) with 2013, the result will be the year corresponding (e.g 2013 + 2 = 2015)
@@ -89,11 +89,11 @@ class SchoolData:
 
         # Print the total enrollment over 10 years from school_data, ground floor, then ground sum.
         print(f"Total ten year enrollment: {int(np.floor(np.nansum(school_data)))}")
-        # Print the mean yearly enrollment over 10 years from school_data
+        # Print the mean yearly enrollment over 10 years from school_data.
         # Uses axis-1 to calculate sum the elements along each row horizontally, then calculating mean, ground floor, then ground sum.
         print(f"Mean total yearly enrollment over 10 years: {int(np.floor(np.nanmean(np.nansum(school_data, axis=1))))}")
 
-        # Check for enrollments if there are any enrollment over 500 students
+        # Check for enrollments if there are any enrollment over 500 students.
         # Count the total of enrollments in the school_data that over 500, if the total is 0, meaning true.
         if np.nansum(school_data > 500) == 0:
             # Print no enrollments over 500 if true.
@@ -111,7 +111,7 @@ class SchoolData:
 
         # Print Stage 1 requirements here
 
-        # Print the shape of the data array. Uses the shape the print out the shape of an array
+        # Print the shape of the data array. Uses the shape the print out the shape of an array.
         print(f"Shape of full data array: {self.data.shape}")
         # Print the dimention of the data array. Uses the ndim to print out the dimentsions of an array.
         print(f"Dimensions of full data array: {self.data.ndim}")
@@ -153,7 +153,7 @@ class SchoolData:
         print(f"Mean enrollment in 2013: {int(np.floor(np.nanmean(self.data[0])))}")
         # Print the mean enrollment in 2022. Use (-1) as the 2022 is he last value in the array. Then calculate mean, ground floor and int.
         print(f"Mean enrollment in 2022: {int(np.floor(np.nanmean(self.data[-1])))}")
-        # Calculate the total graduating class of 2022. Use (-1) as the 2022 is he last value in the array
+        # Calculate the total graduating class of 2022. Use (-1) as the 2022 is he last value in the array.
         # Take all value (:) from the grade 12 as the third column (2). Then calculate mean, ground floor and int.
         print(f"Total graduating class of 2022: {int(np.floor(np.nansum(self.data[-1, :, 2])))}")
         # Print the highest enrollment for a single grade.
